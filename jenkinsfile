@@ -5,6 +5,6 @@ pipeline
     {
         stage('scm cccheckout'){
             steps{
-                'git branch: 'main', url: 'https://github.com/S0naw/maven-project.git'} }
+                'git branch: 'master', url: 'https://github.com/S0naw/maven-project.git'} }
     }
 }
