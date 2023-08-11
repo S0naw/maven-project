@@ -1,0 +1,12 @@
+pipeline
+{
+    agents any
+    stages
+    {
+        stage{
+            steps{
+                'git branch: 'main', url: 'https://github.com/S0naw/maven-project.git'
+            }
+        }
+    }
+}
