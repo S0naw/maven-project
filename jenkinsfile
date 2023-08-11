@@ -5,8 +5,7 @@ pipeline
     {
         stage{
             steps{
-                'git branch: 'main', url: 'https://github.com/S0naw/maven-project.git'
-            }
+                'git branch: 'main', url: 'https://github.com/S0naw/maven-project.git'}
         }
     }
 }
