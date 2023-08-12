@@ -18,7 +18,7 @@ pipeline
             steps{
                 withSonarQubeEnv(credentialsId: 'sonar',installationName:'sonar') {
                     withMaven(globalMavenSettingsConfig: '698151fa-e8b6-4fcf-bddc-4255f5a16ce1', jdk: 'localjdk', maven: 'LocalMaven', mavenSettingsConfig: 'a83dad05-7b05-475a-9f84-4a43c63e5487', traceability: true) {
-                      {sh 'sonar:sonar package'}
+                      sh 'sonar:sonar package'}
                 }
             }
         }
