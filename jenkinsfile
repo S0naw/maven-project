@@ -29,7 +29,7 @@ steps{ sh 'docker build -t sonaw/tomcat2023:latest .'}
 stage('docker push to docker registry')
 {
 steps{
-{withDockerRegistry(credentialsId: 'ecr:ap-south-1:aws credential', url: '269471964451.dkr.ecr.ap-south-1.amazonaws.com/myregistry') {
+withDockerRegistry(credentialsId: 'ecr:ap-south-1:aws credential', url: '269471964451.dkr.ecr.ap-south-1.amazonaws.com/myregistry') {
     sh 'docker build -t 269471964451.dkr.ecr.ap-south-1.amazonaws.com/myregistry:latest .'
     sh 'docker push 269471964451.dkr.ecr.ap-south-1.amazonaws.com/myregistry:latest'
 }}
