@@ -22,10 +22,6 @@ stage('build the code'){
 }
             }
         }
-stage('docker image creation')
-{
-steps{ sh 'docker build -t sonaw/tomcat2023:latest .'}
-}
 stage('docker push to docker registry')
 {
 steps{
