@@ -33,4 +33,4 @@ stage('docker push to docker registry')
 }}
 }
 }
-}
+
