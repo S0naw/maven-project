@@ -30,6 +30,14 @@ withDockerRegistry(credentialsId: 'ecr:ap-south-1:aws credential', url: 'https:/
     sh 'docker push 269471964451.dkr.ecr.ap-south-1.amazonaws.com/myregistry:latest'
 }}
 }
+stage('eks deployment')
+{
+steps{
+withAWS(credentials: 'aws credential', region: 'ap-south-1') {
+   sh 'kubectl apply -f eks.yaml'
+}
+}
+}
 }
 }
 
