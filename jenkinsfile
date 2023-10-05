@@ -34,7 +34,9 @@ stage('eks deployment')
 {
 steps{
 withAWS(credentials: 'aws credential', region: 'ap-south-1') {
-   sh 'kubectl apply -f eks.yaml'
+   sh 'aws sts get-caller-identity'
+  sh 'aws eks --region eu-central-1 update-kubeconfig --name k8s-eks'
+  sh 'kubectl apply -f eks.yaml'
 }
 }
 }
